@@ -149,11 +149,15 @@ ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int3
                                           float major) {
     ALOGI("onPointerDown: x=%d, y=%d, minor=%f, major=%f", x, y, minor, major);
 
+    ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
+
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
     ALOGI("onPointerUp");
+
+    ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
 
     return ndk::ScopedAStatus::ok();
 }
@@ -206,6 +210,8 @@ ndk::ScopedAStatus Session::setIgnoreDisplayTouches(bool /*shouldIgnore*/) {
 
 ndk::ScopedAStatus Session::cancel() {
     ALOGI("cancel");
+
+    ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
 
     int ret = mDevice->cancel(mDevice);
 
