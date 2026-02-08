@@ -1039,7 +1039,6 @@ on property:sys.ship_mode2.enable=1
 on property:sys.boot_completed=1
     # stop bootprof
     write /proc/bootprof 0
-    stop boot_log
 
 #
 #  External Modme control related services
@@ -1065,14 +1064,3 @@ on property:sys.touch.pocket_mode=*
 # Dt2w
 on property:vendor.touch.double_tap_to_wake=*
     write /proc/touchpanel/gesture_mode ${vendor.touch.double_tap_to_wake}
-
-# Logger
-service boot_log /system/bin/logcat -b all -D -f /metadata/boot_log.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on boot
-    start boot_log
