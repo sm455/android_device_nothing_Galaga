@@ -1108,6 +1108,8 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so
 
@@ -1163,13 +1165,12 @@ vendor/etc/thermal/thermal_policy_12.conf
 vendor/etc/thermal/thermal_policy_13.conf
 vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_15.conf
+vendor/lib64/libifcutils_mtk.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
 vendor/etc/init/android.hardware.tetheroffload-V1-service.rc
 vendor/etc/vintf/manifest/android.hardware.tetheroffload-V1-service.xml
-vendor/lib64/libforkexecwrap.so
-vendor/lib64/libifcutils_mtk.so
 
 # VPU
 vendor/lib64/libmvpu_cic_ci_compiler.so
@@ -1235,18 +1236,13 @@ vendor/lib64/libaacvibrator.so
 vendor/firmware/haptic_config.bin
 
 # WiFi
-vendor/bin/netdagent
 vendor/bin/wlan_assistant
 vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/netdagent.rc
 vendor/etc/init/wlan_assistant.rc
-vendor/etc/vintf/manifest/CommandService.xml
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
-vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # WiFi (Firmware)
 vendor/firmware/txpowerctrl.cfg
