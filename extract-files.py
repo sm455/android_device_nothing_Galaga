@@ -58,8 +58,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.audio.common-V1-ndk.so', 'android.hardware.audio.common-V2-ndk.so'),
      'vendor/lib64/mt6878/libpqconfig.so': blob_fixup()
         .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
-     ('vendor/lib64/libaaa_afassist_V2.so', 'vendor/lib64/mt6878/lib3a.ae.so', 'vendor/lib64/mt6878/lib3a.af.core.so', 'vendor/lib64/libaaa_afassistctrl.so'): blob_fixup()
-        .add_needed('libshim_camera.so'),
      'vendor/lib64/libwa_widelens_undistort_impl.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_createFromHandle')
