@@ -1,9 +1,10 @@
-From 07d7de0d8705f7c8ca3ea75aea0b01d334101c43 Mon Sep 17 00:00:00 2001
+From c5fc5a94444ebb7910a35f6b1259d851d73f30ef Mon Sep 17 00:00:00 2001
 From: bengris32 <bengris32@protonmail.ch>
-Date: Thu, 6 Mar 2025 19:27:12 +0530
-Subject: [PATCH 2/2] ImsService: Export receivers that aren't exclusively
+Date: Wed, 25 Feb 2026 16:29:36 +0530
+Subject: [PATCH 2/3] ImsService: Export receivers that aren't exclusively
  registered for system broadcasts
 
+Signed-off-by: sm455 <221133194+sm455@users.noreply.github.com>
 ---
  smali/com/mediatek/ims/ImsConfigManager.smali               | 6 ++++--
  smali/com/mediatek/ims/MtkSuppServExt.smali                 | 6 ++++--
@@ -212,7 +213,7 @@ index bfdcbf9..8529b1f 100644
      .line 590
      return-void
 diff --git a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
-index bbd29ce..38519cf 100644
+index bbd29ce..38c4697 100644
 --- a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
 +++ b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
 @@ -3544,7 +3544,7 @@
@@ -231,10 +232,10 @@ index bbd29ce..38519cf 100644
 -    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 +    const/4 v3, 0x2
 +
-+    invoke-virtual {v1, v2, v0, v3 }, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
++    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
  
      .line 787
      return-void
 -- 
-2.43.0
+2.53.0
 
