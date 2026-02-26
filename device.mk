@@ -203,8 +203,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayGalaga
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayGalaga \
-    LineageSDKResGalaga
+    LineageApertureOverlayGalaga
 
 PRODUCT_PACKAGES += \
     MssiFrameworkOverlay \
