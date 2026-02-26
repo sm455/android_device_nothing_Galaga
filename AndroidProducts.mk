@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_Galaga.mk
+    $(LOCAL_DIR)/voltage_Galaga.mk

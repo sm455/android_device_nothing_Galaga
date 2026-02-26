@@ -12,11 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/nothing/Galaga/device.mk)
 
 # Inherit some common lineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_ENABLE_BLUR := true
 
-PRODUCT_NAME := lineage_Galaga
+PRODUCT_NAME := voltage_Galaga
 PRODUCT_DEVICE := Galaga
 PRODUCT_MANUFACTURER := Nothing
 PRODUCT_BRAND := Nothing

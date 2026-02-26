@@ -104,7 +104,7 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_PATH)/vendor/tui-common.ko
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/voltage/config/BoardConfigReservedSize.mk
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608

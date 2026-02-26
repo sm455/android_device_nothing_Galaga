@@ -208,8 +208,7 @@ PRODUCT_PACKAGES += \
     WifiOverlayGalaga
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayGalaga \
-    LineageSDKResGalaga
+    LineageApertureOverlayGalaga
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
