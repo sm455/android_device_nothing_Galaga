@@ -200,15 +200,21 @@ PRODUCT_PACKAGES += \
     CarrierConfigResGalaga \
     FrameworkResOverlayGalaga \
     SettingsResOverlayGalaga \
-    SystemUIOverlayGalaga \
-    TelephonyResTargetGalaga \
-    WifiOverlayGalaga
+    SystemUIOverlayGalaga
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlayGalaga \
     LineageSDKResGalaga
 
 PRODUCT_PACKAGES += \
+    MssiFrameworkOverlay \
+    MssiFrameworkTelephony5gOverlay \
+    MssiFrameworkTelephonyOverlay \
+    MssiNetworkStackOverlay\
+    MssiTelephonyOverlay \
+    MssiWifi6gOverlay \
+    MssiWifiMultiStaOverlay \
+    MssiWifiOverlay \
     NcmTetheringOverlay
 
 # Power
