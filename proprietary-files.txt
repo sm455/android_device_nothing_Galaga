@@ -12,7 +12,6 @@ vendor/lib64/libaal_sec.so
 # Audio
 vendor/etc/AudioLog_dynamic.xml
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6878.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-stock.so;FIX_SONAME
 vendor/lib64/libaudio_param_parser-vnd.so
@@ -37,17 +36,6 @@ vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
-vendor/lib64/libvow_ap_test_aa.so
-vendor/lib64/libvow_ap_test_dd.so
-vendor/lib64/libvow_ap_test_ha.so
-vendor/lib64/libvow_ap_test_hh.so
-vendor/lib64/libvow_ap_test_nn.so
-vendor/lib64/libvow_ap_test_trip_aa.so
-vendor/lib64/libvow_ap_test_trip_dd.so
-vendor/lib64/libvow_ap_test_trip_ha.so
-vendor/lib64/libvow_ap_test_trip_hh.so
-vendor/lib64/libvow_ap_test_trip_nn.so
-vendor/lib64/libvow_comp_test.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
@@ -893,12 +881,6 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/priv-app/ImsService/ImsService.apk
 system_ext/priv-app/MtkGbaService/MtkGbaService.apk
 system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
-
-# HotwordEnrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Kernel
 vendor/bin/init.insmod.sh
