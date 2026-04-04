@@ -7,5 +7,5 @@
           package="android.overlay.galaga">
     <overlay android:targetPackage="android"
              android:isStatic="true"
-             android:priority="1" />
+             android:priority="200" />
 </manifest>

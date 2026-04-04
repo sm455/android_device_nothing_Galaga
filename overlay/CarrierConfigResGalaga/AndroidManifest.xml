@@ -7,5 +7,5 @@
           package="com.android.carrierconfig.overlay.galaga">
     <overlay android:targetPackage="com.android.carrierconfig"
              android:isStatic="true"
-             android:priority="350" />
+             android:priority="200" />
 </manifest>
