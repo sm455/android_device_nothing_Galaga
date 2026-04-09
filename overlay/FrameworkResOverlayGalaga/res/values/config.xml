@@ -472,6 +472,14 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M540,68.6m-21.5,0a21.5,21.5 0,1 1,43 0a21.5,21.5 0,1 1,-43 0 @left</string>
 
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M454.0, 0.0 h 86.0 v 126 h -86.0 Z @left</string>
+
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
          -->
