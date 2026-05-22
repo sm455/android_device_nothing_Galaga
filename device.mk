@@ -80,8 +80,8 @@ PRODUCT_COPY_FILES += \
 
 # Bootcontrol
 PRODUCT_PACKAGES += \
-    com.android.hardware.boot \
-    android.hardware.boot-service.default_recovery
+    android.hardware.boot-service.mediatek \
+    android.hardware.boot-service.mediatek_recovery
 
 # Camera
 PRODUCT_COPY_FILES += \
