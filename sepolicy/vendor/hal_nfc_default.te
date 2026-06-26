@@ -1,0 +1,2 @@
+allow hal_nfc_default hal_tmsnfc_service:service_manager { find add };
+allow hal_nfc_default nfc_device:chr_file rw_file_perms;

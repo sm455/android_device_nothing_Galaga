@@ -103,6 +103,14 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_PATH)/vendor/gps_scp.ko \
     $(KERNEL_PATH)/vendor/tui-common.ko
 
+# nfc
+ODM_MANIFEST_SKUS += IND JPN EEA ROW TUR
+ODM_MANIFEST_IND_FILES := $(DEVICE_PATH)/vintf/manifest_nonfc.xml
+ODM_MANIFEST_JPN_FILES := $(DEVICE_PATH)/vintf/manifest_nonfc.xml
+ODM_MANIFEST_EEA_FILES := $(DEVICE_PATH)/vintf/manifest_tms.xml
+ODM_MANIFEST_ROW_FILES := $(DEVICE_PATH)/vintf/manifest_tms.xml
+ODM_MANIFEST_TUR_FILES := $(DEVICE_PATH)/vintf/manifest_tms.xml
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_FLASH_BLOCK_SIZE := 4096
