@@ -792,7 +792,7 @@ vendor/lib64/hw/mtkgeofence.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.gnss.batching-impl.so
 vendor/lib64/mt6878/libDR.so;SYMLINK=vendor/lib64/libDR.so
-vendor/lib64/mt6878/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
+vendor/lib64/mt6878/libmnl.so:vendor/lib64/libmnl-mtk.so;FIX_SONAME
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/mtk_lbs_service-impl.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor-V1-ndk.so
