@@ -949,7 +949,7 @@ vendor/lib64/libcodec2_vpp_fa_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter-mtk.so;FIX_SONAME
 
 # Media (Configs)
 vendor/etc/media_profiles_V1_0.xml
