@@ -30,6 +30,10 @@ cc_binary {
         "android.hardware.biometrics.common.util",
     ],
     static_libs: ["libandroid.hardware.biometrics.fingerprint.NothingProps"],
+
+    cflags: [
+        "-DTARGET_USES_LHBM",
+    ],
 }
 
 sysprop_library {

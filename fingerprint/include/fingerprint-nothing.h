@@ -320,4 +320,18 @@ typedef struct fingerprint_module {
     struct hw_module_t common;
 } fingerprint_module_t;
 
+#ifdef TARGET_USES_LHBM 
+#define PANEL_LHBM_PATH "/proc/touchpanel/fod_mode"
+
+void setLHBM(int val);
+
+enum lhbm_fod_modes {
+    FOD_OFF,
+    FOD_ENABLE,
+    FOD_PRESSED,
+    FOD_FINISHED,
+};
+
+#endif
+
 #endif /* ANDROID_INCLUDE_HARDWARE_FINGERPRINT_H */

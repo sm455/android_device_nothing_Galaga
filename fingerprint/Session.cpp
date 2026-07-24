@@ -14,11 +14,25 @@
 
 #include "CancellationSignal.h"
 
+#ifdef TARGET_USES_LHBM
+
+void setLHBM(int val) {
+    if (val > FOD_FINISHED || val < FOD_OFF) return;
+    std::string str = std::to_string(val);
+    if (!::android::base::WriteStringToFile(str, PANEL_LHBM_PATH)) {
+        ALOGW("setLHBM: failed to write %d: %s", val, strerror(errno));
+        return;
+    }
+    ALOGD("set fod_mode: %d", val);
+}
+#endif
+
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
+
 
 void onClientDeath(void* cookie) {
     ALOGI("FingerprintService has died");
@@ -149,7 +163,9 @@ ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int3
                                           float major) {
     ALOGI("onPointerDown: x=%d, y=%d, minor=%f, major=%f", x, y, minor, major);
 
+#ifndef TARGET_USES_LHBM 
     ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
+#endif
 
     return ndk::ScopedAStatus::ok();
 }
@@ -157,7 +173,9 @@ ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int3
 ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
     ALOGI("onPointerUp");
 
+#ifndef TARGET_USES_LHBM 
     ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
+#endif
 
     return ndk::ScopedAStatus::ok();
 }
@@ -165,7 +183,9 @@ ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
 ndk::ScopedAStatus Session::onUiReady() {
     ALOGI("onUiReady");
 
+#ifndef TARGET_USES_LHBM 
     ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
+#endif
 
     return ndk::ScopedAStatus::ok();
 }
@@ -204,14 +224,23 @@ ndk::ScopedAStatus Session::onPointerCancelWithContext(const PointerContext& /*c
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Session::setIgnoreDisplayTouches(bool /*shouldIgnore*/) {
+ndk::ScopedAStatus Session::setIgnoreDisplayTouches(bool shouldIgnore) {
+
+    ALOGI("Set ignore display touches: %d", shouldIgnore);
+#ifdef TARGET_USES_LHBM
+    setLHBM(shouldIgnore ? FOD_FINISHED : FOD_ENABLE);
+#endif
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Session::cancel() {
     ALOGI("cancel");
 
+#ifdef TARGET_USES_LHBM 
+    setLHBM(FOD_FINISHED);
+#else
     ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
+#endif
 
     int ret = mDevice->cancel(mDevice);
 
@@ -226,6 +255,10 @@ ndk::ScopedAStatus Session::cancel() {
 
 ndk::ScopedAStatus Session::close() {
     ALOGI("close");
+
+#ifdef TARGET_USES_LHBM 
+    setLHBM(FOD_FINISHED);
+#endif
 
     mClosed = true;
     mCb->onSessionClosed();
@@ -385,6 +418,9 @@ void Session::notify(const fingerprint_msg_t* msg) {
         case FINGERPRINT_AUTHENTICATED: {
             ALOGD("onAuthenticated(fid=%d, gid=%d)", msg->data.authenticated.finger.fid,
                 msg->data.authenticated.finger.gid);
+#ifdef TARGET_USES_LHBM 
+                setLHBM(FOD_FINISHED);
+#endif
             if (msg->data.authenticated.finger.fid != 0) {
                 const hw_auth_token_t hat = msg->data.authenticated.hat;
                 HardwareAuthToken authToken;
