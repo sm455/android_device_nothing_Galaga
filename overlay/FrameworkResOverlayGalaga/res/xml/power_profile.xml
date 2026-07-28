@@ -111,7 +111,8 @@
     </array>
     <item name="cpu.idle">6.2</item>
     <item name="cpu.suspend">5</item>
-    <item name="cpu.active">2.55</item>. <item name="cpu.cluster_power.cluster0">2.11</item>
+    <item name="cpu.active">2.55</item>
+    <item name="cpu.cluster_power.cluster0">2.11</item>
     <item name="cpu.cluster_power.cluster1">2.22</item>
     <array name="memory.bandwidths">
         <value>22.7</value>
