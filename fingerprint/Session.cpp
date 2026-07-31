@@ -16,11 +16,11 @@
 
 #ifdef TARGET_USES_LHBM
 
-void setLHBM(int val) {
+void setFOD(int val) {
     if (val > FOD_FINISHED || val < FOD_OFF) return;
     std::string str = std::to_string(val);
     if (!::android::base::WriteStringToFile(str, PANEL_LHBM_PATH)) {
-        ALOGW("setLHBM: failed to write %d: %s", val, strerror(errno));
+        ALOGW("setFOD: failed to write %d: %s", val, strerror(errno));
         return;
     }
     ALOGD("set fod_mode: %d", val);
@@ -115,7 +115,7 @@ ndk::ScopedAStatus Session::enumerateEnrollments() {
     }
 
 #ifdef TARGET_USES_LHBM
-    setLHBM(FOD_OFF);
+    setFOD(FOD_OFF);
 #endif
 
     return ndk::ScopedAStatus::ok();
@@ -232,7 +232,7 @@ ndk::ScopedAStatus Session::setIgnoreDisplayTouches(bool shouldIgnore) {
 
     ALOGI("Set ignore display touches: %d", shouldIgnore);
 #ifdef TARGET_USES_LHBM
-    setLHBM(shouldIgnore ? FOD_FINISHED : FOD_ENABLE);
+    setFOD(shouldIgnore ? FOD_FINISHED : FOD_ENABLE);
 #endif
     return ndk::ScopedAStatus::ok();
 }
@@ -241,7 +241,7 @@ ndk::ScopedAStatus Session::cancel() {
     ALOGI("cancel");
 
 #ifdef TARGET_USES_LHBM 
-    setLHBM(FOD_FINISHED);
+    setFOD(FOD_FINISHED);
 #else
     ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
 #endif
@@ -261,7 +261,7 @@ ndk::ScopedAStatus Session::close() {
     ALOGI("close");
 
 #ifdef TARGET_USES_LHBM 
-    setLHBM(FOD_FINISHED);
+    setFOD(FOD_FINISHED);
 #endif
 
     mClosed = true;
@@ -423,7 +423,7 @@ void Session::notify(const fingerprint_msg_t* msg) {
             ALOGD("onAuthenticated(fid=%d, gid=%d)", msg->data.authenticated.finger.fid,
                 msg->data.authenticated.finger.gid);
 #ifdef TARGET_USES_LHBM 
-                setLHBM(FOD_FINISHED);
+                setFOD(FOD_FINISHED);
 #endif
             if (msg->data.authenticated.finger.fid != 0) {
                 const hw_auth_token_t hat = msg->data.authenticated.hat;
