@@ -114,6 +114,10 @@ ndk::ScopedAStatus Session::enumerateEnrollments() {
         ALOGE("enumerate failed: %d", error);
     }
 
+#ifdef TARGET_USES_LHBM
+    setLHBM(FOD_OFF);
+#endif
+
     return ndk::ScopedAStatus::ok();
 }
 
