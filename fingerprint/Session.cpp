@@ -166,8 +166,9 @@ ndk::ScopedAStatus Session::resetLockout(const HardwareAuthToken& hat) {
 ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int32_t y, float minor,
                                           float major) {
     ALOGI("onPointerDown: x=%d, y=%d, minor=%f, major=%f", x, y, minor, major);
-
-#ifndef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM 
+    setFOD(FOD_ENABLE);
+#else
     ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
 #endif
 
