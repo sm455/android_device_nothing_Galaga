@@ -1,15 +1,19 @@
+//
+// Copyright (C) The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_binary {
-    name: "android.hardware.vibrator.service.galaga-richtap",
+    name: "android.hardware.vibrator.service.nothing-rt_ics",
     vendor: true,
     cflags: [
         "-Wall",
         "-Werror",
-        "-DLOG_TAG=\"android.hardware.vibrator.service.galaga-richtap\"",
     ],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.vibrator.service.galaga-richtap.rc"],
+    init_rc: ["android.hardware.vibrator.service.nothing-rt_ics.rc"],
     vintf_fragments: [
-        "android.hardware.vibrator.service.galaga-richtap.xml",
+        "android.hardware.vibrator.service.nothing-rt_ics.xml",
     ],
     srcs: [
         "service.cpp",
@@ -22,11 +26,17 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "libaacvibrator",
+        "libics_haptic",
         "android.hardware.vibrator-V2-ndk",
     ],
 }
 
 cc_library_shared {
     name: "libaacvibrator",
+    soc_specific: true,
+}
+
+cc_library_shared {
+    name: "libics_haptic",
     soc_specific: true,
 }

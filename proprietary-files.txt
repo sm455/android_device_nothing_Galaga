@@ -1248,7 +1248,9 @@ vendor/lib64/vendor.trustonic.tee@1.1.so
 
 # Vibrator (Richtap)
 vendor/etc/aac_richtap.config
+vendor/etc/ics_sfdc.cfg
 vendor/lib64/libaacvibrator.so
+vendor/lib64/libics_haptic.so
 
 # Vibrator
 vendor/firmware/haptic_config.bin
