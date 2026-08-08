@@ -1,0 +1,68 @@
+on post-fs-data
+    chown system system /dev/aac_richtap
+    chmod 0666 /dev/aac_richtap
+    chown system system /dev/ics_sfdc
+    chmod 0666 /dev/ics_sfdc
+    chown system system /sys/class/leds/vibrator_nt/activate
+    chmod 0666 /sys/class/leds/vibrator_nt/activate
+    chown system system /sys/class/leds/vibrator_nt/adc_offset
+    chmod 0666 /sys/class/leds/vibrator_nt/adc_offset
+    chown system system /sys/class/leds/vibrator_nt/brake_en
+    chmod 0666 /sys/class/leds/vibrator_nt/brake_en
+    chown system system /sys/class/leds/vibrator_nt/brightness
+    chmod 0666 /sys/class/leds/vibrator_nt/brightness
+    chown system system /sys/class/leds/vibrator_nt/chip_id
+    chmod 0666 /sys/class/leds/vibrator_nt/chip_id
+    chown system system /sys/class/leds/vibrator_nt/daq_data
+    chmod 0666 /sys/class/leds/vibrator_nt/daq_data
+    chown system system /sys/class/leds/vibrator_nt/daq_param
+    chmod 0666 /sys/class/leds/vibrator_nt/daq_param
+    chown system system /sys/class/leds/vibrator_nt/duration
+    chmod 0666 /sys/class/leds/vibrator_nt/duration
+    chown system system /sys/class/leds/vibrator_nt/f0
+    chmod 0666 /sys/class/leds/vibrator_nt/f0
+    chown system system /sys/class/leds/vibrator_nt/gain
+    chmod 0666 /sys/class/leds/vibrator_nt/gain
+    chown system system /sys/class/leds/vibrator_nt/gpp
+    chmod 0666 /sys/class/leds/vibrator_nt/gpp
+    chown system system /sys/class/leds/vibrator_nt/index
+    chmod 0666 /sys/class/leds/vibrator_nt/index
+    chown system system /sys/class/leds/vibrator_nt/lk_f0
+    chmod 0666 /sys/class/leds/vibrator_nt/lk_f0
+    chown system system /sys/class/leds/vibrator_nt/max_brightness
+    chmod 0666 /sys/class/leds/vibrator_nt/max_brightness
+    chown system system /sys/class/leds/vibrator_nt/play
+    chmod 0666 /sys/class/leds/vibrator_nt/play
+    chown system system /sys/class/leds/vibrator_nt/playlist
+    chmod 0666 /sys/class/leds/vibrator_nt/playlist
+    chown system system /sys/class/leds/vibrator_nt/reg
+    chmod 0666 /sys/class/leds/vibrator_nt/reg
+    chown system system /sys/class/leds/vibrator_nt/reset
+    chmod 0666 /sys/class/leds/vibrator_nt/reset
+    chown system system /sys/class/leds/vibrator_nt/resistance
+    chmod 0666 /sys/class/leds/vibrator_nt/resistance
+    chown system system /sys/class/leds/vibrator_nt/rtp
+    chmod 0666 /sys/class/leds/vibrator_nt/rtp
+    chown system system /sys/class/leds/vibrator_nt/state
+    chmod 0666 /sys/class/leds/vibrator_nt/state
+    chown system system /sys/class/leds/vibrator_nt/stream_data
+    chmod 0666 /sys/class/leds/vibrator_nt/stream_data
+    chown system system /sys/class/leds/vibrator_nt/stream_start
+    chmod 0666 /sys/class/leds/vibrator_nt/stream_start
+    chown system system /sys/class/leds/vibrator_nt/trigger
+    chmod 0666 /sys/class/leds/vibrator_nt/trigger
+    chown system system /sys/class/leds/vibrator_nt/uevent
+    chmod 0666 /sys/class/leds/vibrator_nt/uevent
+    chown system system /sys/class/leds/vibrator_nt/vbat
+    chmod 0666 /sys/class/leds/vibrator_nt/vbat
+    chown system system /sys/class/leds/vibrator_nt/vbst
+    chmod 0666 /sys/class/leds/vibrator_nt/vbst
+    chown system system /sys/class/leds/vibrator_nt/waveform
+    chmod 0666 /sys/class/leds/vibrator_nt/waveform
+
+service vendor.vibrator /vendor/bin/hw/android.hardware.vibrator.service.nothing-rt_ics
+    class hal
+    user system
+    group system input
+    setenv RICHTAP_DEVICE_PATH  /dev/aac_richtap
+    setenv ENV_RICHTAP_CONFIG_PATH /vendor/etc/aac_richtap.config
