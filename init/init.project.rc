@@ -92,3 +92,10 @@ on post-fs-data
 
     chmod 0660 /dev/spm
     chown system system /dev/spm
+
+on property:vendor.all.modules.ready=1
+    chown system system /proc/touchpanel/gesture_code
+    chown system system /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_enabled
+    chown system system /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_pressed
+    chown system system /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_fod_enabled
+    chown system system /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_fod_pressed

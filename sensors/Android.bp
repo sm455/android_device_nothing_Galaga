@@ -1,9 +1,3 @@
-//
-// Copyright (C) 2022 The LineageOS Project
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-
 cc_library_shared {
     name: "sensors.nothing",
     defaults: ["hidl_defaults"],
@@ -30,6 +24,11 @@ cc_library_shared {
     ],
     cflags: [
         "-DLOG_TAG=\"sensors.nothing\"",
+        "-DPANEL_SINGLE_TAP_PATH=\"/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_pressed\"",
+        "-DPANEL_SINGLE_TAP_ENABLED_PATH=\"/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_enabled\"",
+        "-DPANEL_SINGLE_TAP_COORDS_PATH=\"/proc/touchpanel/gesture_code\"",
+        "-DPANEL_UDFPS_PATH=\"/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_fod_pressed\"",
+        "-DPANEL_UDFPS_ENABLED_PATH=\"/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_fod_enabled\"",
     ],
     vendor: true,
 }
