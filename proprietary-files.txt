@@ -725,7 +725,6 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6878/ISP_info.db;S
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;MAKE_COPY_RULE_ONLY
 
 # Display
-vendor/etc/displayconfig/display_id_4627039422300187648.xml
 vendor/etc/init/init.touch.rc
 vendor/firmware/FT3683G_Conf_MultipleTest_BOE.ini
 vendor/firmware/FT3683G_Conf_MultipleTest_VXN.ini
