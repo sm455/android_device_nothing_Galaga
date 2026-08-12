@@ -1,1 +1,6 @@
+# Touchpanel
 allow vendor_init proc_touchpanel:file { read write open };
+
+# Vibrator
+get_prop(vendor_init, vendor_vibrator_prop)
+set_prop(vendor_init, vendor_vibrator_prop)

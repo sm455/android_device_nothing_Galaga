@@ -7,3 +7,6 @@ persist.vendor.overlay.fp_vendor    u:object_r:vendor_fingerprint_prop:s0
 
 # TEE
 ro.vendor.trustonic.ready u:object_r:vendor_trustonic_prop:s0 exact bool
+
+# Vibrator
+vendor.vibrator.    u:object_r:vendor_vibrator_prop:s0
