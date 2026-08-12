@@ -13,6 +13,8 @@
 #include <cmath>
 #include <thread>
 
+#include <android-base/properties.h>
+
 #include "aac_vibra_function.h"
 #include "ics_haptic_function.h"
 
@@ -92,6 +94,13 @@ static void updateF0() {
 
 Vibrator::Vibrator() {
     uint32_t deviceType = 0;
+
+    std::string devicePath = ::android::base::GetProperty("vendor.vibrator.device", "");
+    if (!devicePath.empty()) {
+        setenv("RICHTAP_DEVICE_PATH", devicePath.c_str(), 1);
+    } else {
+        ALOGE("No vibrator device set!");
+    }
 
     int32_t ret = aac_vibra_init(&deviceType);
     if (ret) {
