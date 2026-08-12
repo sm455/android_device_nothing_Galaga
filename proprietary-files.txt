@@ -744,10 +744,7 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 
 # Fingerprint
-vendor/bin/hw/vendor.nothing.hardware.biometrics.fingerprint-service
 vendor/etc/init/vendor.noth.fingerprint.goodix.config.rc
-vendor/etc/init/vendor.nothing.hardware.biometrics.fingerprint-service.rc
-vendor/etc/vintf/manifest/vendor.nothing.hardware.biometrics.fingerprint-service.xml
 vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.so

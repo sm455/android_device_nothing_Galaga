@@ -61,6 +61,10 @@ drm.service.enabled=true
 # FM
 ro.vendor.fm.platform=connac2x
 
+# FP
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.sensor_location=540|2176|92
+
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
