@@ -1,8 +1,5 @@
 # MTK project .rc configure
 
-on init
-    setprop ro.boot.hardware.revision ${ro.boot.rsc}
-
 #NT_EDIT BEE-62 for smartpa cali begin
 on fs
     mkdir /mnt/vendor/persist/factory 0771 root root
@@ -22,47 +19,26 @@ on fs
 #NT_EDIT BEE-447 for vibrator cali end
 
 on post-fs-data
-
-#Camera
-    chmod 0660 /dev/MAINAF
-    chown system camera /dev/MAINAF
-
-    chmod 0660 /dev/MAINAF2
-    chown system camera /dev/MAINAF2
-
-    chmod 0660 /dev/SUBAF
-    chown system camera /dev/SUBAF
-
-    chmod 0660 /dev/GAF001AF
-    chown system camera /dev/GAF001AF
-
-    chmod 0660 /dev/DW9714AF
-    chown system camera /dev/DW9714AF
-
-    chmod 0660 /dev/LC898212AF
-    chown system camera /dev/LC898212AF
-
-    chmod 0660 /dev/BU64745GWZAF
-    chown system camera /dev/BU64745GWZAF
-
-#dual calibration
+    # dual calibration
     mkdir /data/vendor/camera 0775 camera camera
     chmod 0444 /mnt/vendor/persist/camera/dualcam_cali.bin
     copy /mnt/vendor/persist/camera/dualcam_cali.bin /data/vendor/camera/bokeh_caldata_uw_persist.bin
     chmod 0444 /data/vendor/camera/bokeh_caldata_uw_persist.bin
     chown cameraserver audio /data/vendor/camera/bokeh_caldata_uw_persist.bin
-    chmod 0777 /vendor/etc/camera
+
     copy /vendor/etc/camera/bokeh_caldata_uw_golden.bin /data/vendor/camera/bokeh_caldata_uw_golden.bin
     chmod 0444 /data/vendor/camera/bokeh_caldata_uw_golden.bin
     chown cameraserver audio /data/vendor/camera/bokeh_caldata_uw_golden.bin
+
     copy /vendor/etc/camera/algo_policy.bin /data/vendor/camera/algo_policy.bin
-    chmod 0777 /data/vendor/camera/algo_policy.bin
+    chmod 0444 /data/vendor/camera/algo_policy.bin
     chown cameraserver cameraserver /data/vendor/camera/algo_policy.bin
+
     copy /vendor/etc/camera/binary_cache /data/vendor/camera/binary_cache
-    chmod 0777 /data/vendor/camera/binary_cache
+    chmod 0444 /data/vendor/camera/binary_cache
     chown cameraserver cameraserver /data/vendor/camera/binary_cache
 
-#galaga calibration
+    # Galaga calibration
     copy /mnt/vendor/persist/camera/dualcam_cali.bin /data/vendor/camera/galaga_caldata_uw_w_persist.bin
     chmod 0444 /data/vendor/camera/galaga_caldata_uw_w_persist.bin
     chown cameraserver audio /data/vendor/camera/galaga_caldata_uw_w_persist.bin
@@ -81,17 +57,6 @@ on post-fs-data
     chown cameraserver audio /data/vendor/camera/galaga_dualcam_cali_golden_T_W_1.bin
 
     mkdir /data/vendor/camera/anc 0775 camera camera
-
-
-#liqun Add permissions for exifinfo 2024/02/27. #AERO-210
-    chmod 0777 /data/vendor/camera
-
-#SMB
-    chown system system /proc/smb/ScreenComm
-    chmod 0660 /proc/smb/ScreenComm
-
-    chmod 0660 /dev/spm
-    chown system system /dev/spm
 
 on property:vendor.all.modules.ready=1
     chown system system /proc/touchpanel/gesture_code
