@@ -5,9 +5,6 @@ genfscon sysfs /devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt63
 # Charger
 genfscon proc /charger    u:object_r:vendor_proc_charger:s0
 
-# Extcon
-genfscon sysfs /devices/platform/extcon-usb    u:object_r:sysfs_extcon:s0
-
 # fp_status
 genfscon sysfs /panel_feature/fp_status    u:object_r:sysfs_panel_feature:s0
 
@@ -18,9 +15,6 @@ genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0       
 genfscon proc /sys/vm/lowmem_reserve_ratio    u:object_r:proc_watermark_boost_factor:s0
 genfscon proc /sys/vm/min_free_kbytes         u:object_r:proc_watermark_boost_factor:s0
 
-# nvmem
-genfscon sysfs /devices/platform/efuse@11f10000/mtk-devinfo0/nvmem    u:object_r:sysfs_nvmem:s0
-
 # Touchpanel
 genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
 
@@ -29,9 +23,7 @@ genfscon sysfs /devices/platform/soc/11c20000.i2c/i2c-0/0-005f/leds/vibrator_nt 
 
 # Wakeup
 genfscon sysfs /devices/platform/18000000.consys/wakeup                                                                          u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-hvdiv-chg/wakeup                                                   u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-hvdiv-chg/wakeup                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup37                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup38                                                               u:object_r:sysfs_wakeup:s0
@@ -41,7 +33,6 @@ genfscon sysfs /devices/platform/nt_chg/power_supply/nt-chg/wakeup45            
 genfscon sysfs /devices/platform/nt_chg/power_supply/nt-chg/wakeup46                                                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/nt_chg/power_supply/nt-chg/wakeup47                                                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/nt_chg/power_supply/nt-chg/wakeup48                                                             u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/pe5/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/wakeup                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11201000.usb0/wakeup                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11280000.i2c/i2c-5/5-0034/11280000.i2c:mt6375@34:adc/wakeup                                 u:object_r:sysfs_wakeup:s0
@@ -65,5 +56,4 @@ genfscon sysfs /devices/platform/soc/1cc04000.spmi/spmi-0/0-06/wakeup           
 genfscon sysfs /devices/platform/soc/1cc04000.spmi/spmi-0/0-09/mt6685-rtc/rtc/rtc0/alarmtimer.0.auto/wakeup                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1cc04000.spmi/spmi-0/0-09/mt6685-rtc/wakeup                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1f000000.mmlsys-config/wakeup                                                               u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/trusty/wakeup                                                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup                                                                    u:object_r:sysfs_wakeup:s0
