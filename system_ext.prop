@@ -11,7 +11,7 @@ ro.camerax.extensions.enabled=true
 sys.brightness.disable_gamma_conversion=true
 
 # Radio
-persist.radio.nt.modem.svn=15
+persist.radio.nt.modem.svn=16
 persist.vendor.mtk.vilte.enable=1
 persist.vendor.mtk_rcs_single_reg_support=1
 persist.vendor.mtk_rtt_support=1
