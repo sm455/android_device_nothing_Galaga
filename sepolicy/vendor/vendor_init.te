@@ -4,3 +4,5 @@ allow vendor_init proc_touchpanel:file { read write open };
 # Vibrator
 get_prop(vendor_init, vendor_vibrator_prop)
 set_prop(vendor_init, vendor_vibrator_prop)
+
+allow vendor_init aac_richtap_device:chr_file r_file_perms;
