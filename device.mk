@@ -274,9 +274,6 @@ BOOT_SECURITY_PATCH := 2026-04-05
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := 2026-04-05
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.boot_security_patch=$(BOOT_SECURITY_PATCH)
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
