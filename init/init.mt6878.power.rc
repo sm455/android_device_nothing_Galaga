@@ -14,11 +14,11 @@ on init
 
     # update cpus for cpuset cgroup
     write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-5
-    write /dev/cpuset/foreground_window/cpus 0-5
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/foreground_window/cpus 0-6
+    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/restricted/cpus 0-2
     write /dev/cpuset/camera-daemon/cpus 0-7
 
 on charger
@@ -61,7 +61,7 @@ on post-fs-data
 
 on boot
     mkdir /dev/cpuset/surfaceflinger
-    write /dev/cpuset/surfaceflinger/cpus 2-5
+    write /dev/cpuset/surfaceflinger/cpus 4-7
     write /dev/cpuset/surfaceflinger/mems 0
     chown system system /dev/cpuset/surfaceflinger
     chown system system /dev/cpuset/surfaceflinger/tasks
