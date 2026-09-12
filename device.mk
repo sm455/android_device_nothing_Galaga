@@ -290,10 +290,13 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/thermal \
+    hardware/google/pixel/usb \
     hardware/mediatek \
-    hardware/google/pixel \
-    hardware/mediatek/libmtkperf_client \
-    hardware/google/interfaces
+    hardware/mediatek/libmtkperf_client
 
 # Thermal
 PRODUCT_PACKAGES += \
