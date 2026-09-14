@@ -130,6 +130,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libcodec2_mtk_venc.so',
     ): blob_fixup()
         .replace_needed('libformatter.so', 'libformatter-mtk.so'),
+    'system_ext/lib64/libsink-mtk.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
