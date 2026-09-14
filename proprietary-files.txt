@@ -744,6 +744,7 @@ vendor/firmware/FT3683G_Conf_MultipleTest_VXN.ini
 vendor/firmware/ft3683g_boe.bin
 vendor/firmware/ft3683g_vxn.bin
 vendor/firmware/valhall-1691526.wa
+vendor/lib64/android.frameworks.displayservice@1.0.so
 
 # DRM (Widevine)
 vendor/apex/com.google.android.widevine.nonupdatable.apex
