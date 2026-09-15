@@ -276,6 +276,7 @@ ro.netflix.bsp_rev=MT6878-38373-1
 
 # NTF
 ro.vendor.nothing.feature.base=0xe24800001004458438124a040106b4247b97ffL
+ro.vendor.nothing.feature.diff.device.Galaga=0x4048890ec02cd3a13f4d02258c42080L
 ro.vendor.nothing.feature.diff.product.GalagaEEA=0x8000000000000000000000L
 ro.vendor.nothing.feature.diff.product.GalagaIND=0x10000000000000000000000L
 ro.vendor.nothing.feature.diff.product.GalagaJPN=0x120000000000000000000000L
