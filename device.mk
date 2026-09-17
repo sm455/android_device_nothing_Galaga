@@ -186,6 +186,10 @@ PRODUCT_PACKAGES += \
 # Properties
 include hardware/mediatek/configs/properties/vendor_logtag.mk
 
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.system_ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
+
 # NTF
 PRODUCT_PACKAGES += \
     nt-fwk.Galaga

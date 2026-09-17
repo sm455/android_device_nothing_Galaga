@@ -5,6 +5,7 @@ ro.audio.usb.period_us=16000
 
 # Camera
 ro.camera.sound.forced=0
+ro.camerax.extensions.enabled=true
 
 # Display
 sys.brightness.disable_gamma_conversion=true
