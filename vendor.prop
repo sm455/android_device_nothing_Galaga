@@ -13,8 +13,6 @@ vendor.audio.powerhal.power.ul=true
 vendor.audio.usb.iems.period_us=5000
 
 # Bluetooth
-persist.bluetooth.a2dp_offload.disabled=false
-persist.bluetooth.leaudio_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.bluetooth.leaudio_offload.supported=false
 ro.vendor.bt.connac3=no

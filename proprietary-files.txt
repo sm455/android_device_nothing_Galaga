@@ -8,10 +8,14 @@ vendor/lib64/libaal_sec.so
 
 # Audio
 vendor/etc/AudioLog_dynamic.xml
+vendor/lib64/hw/android.hardware.audio@7.1-impl-mediatek.so
+vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6878.so
 vendor/lib64/hw/sound_trigger.primary.default.so
+vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-stock.so;FIX_SONAME
+vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk-mtk.so;FIX_SONAME
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
@@ -46,9 +50,6 @@ vendor/lib64/libvow_ap_test_trip_hh.so
 vendor/lib64/libvow_ap_test_trip_nn.so
 vendor/lib64/libvow_comp_test.so
 vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Audio (Configs)
 vendor/etc/audio_device.xml
@@ -189,6 +190,15 @@ vendor/etc/smartpa_param/tfa98xx_voice.bin
 
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
+
+# Bluetooth (audio)
+vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_V3.xml
+vendor/etc/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml
+vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so
+vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Bluetooth (Driver)
 vendor/etc/init/init.bt_drv.rc

@@ -3,6 +3,11 @@ ro.audio.silent=0
 ro.audio.flinger_standbytime_ms=1000
 ro.audio.usb.period_us=16000
 
+# Bluetooth
+persist.bluetooth.a2dp_offload.coex_buf_count=3
+persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.leaudio_offload.disabled=true
+
 # Camera
 ro.camera.sound.forced=0
 ro.camerax.extensions.enabled=true
