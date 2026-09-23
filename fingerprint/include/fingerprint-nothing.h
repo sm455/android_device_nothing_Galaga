@@ -320,7 +320,7 @@ typedef struct fingerprint_module {
     struct hw_module_t common;
 } fingerprint_module_t;
 
-#ifdef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM
 #define PANEL_LHBM_PATH "/proc/touchpanel/fod_mode"
 
 void setFOD(int val);

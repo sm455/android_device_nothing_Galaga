@@ -96,7 +96,7 @@ class OneShotSensor : public Sensor {
 class SysfsPollingOneShotSensor : public OneShotSensor {
   public:
     SysfsPollingOneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callback,
-                              const std::string& pollPath, 
+                              const std::string& pollPath,
                               std::optional<std::string> enablePath,
                               std::optional<std::string> coordinatePath,
                               const std::string& name, const std::string& typeAsString,
@@ -134,16 +134,16 @@ class SingleTapSensor : public SysfsPollingOneShotSensor {
   public:
     SingleTapSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         : SysfsPollingOneShotSensor(
-              sensorHandle, callback, PANEL_SINGLE_TAP_PATH, 
+              sensorHandle, callback, PANEL_SINGLE_TAP_PATH,
 #ifdef PANEL_SINGLE_TAP_ENABLED_PATH
               PANEL_SINGLE_TAP_ENABLED_PATH,
-#else 
+#else
               std::nullopt,
 #endif
 
 #ifdef PANEL_SINGLE_TAP_COORDS_PATH
               PANEL_SINGLE_TAP_COORDS_PATH,
-#else 
+#else
               std::nullopt,
 #endif
               "Single Tap Sensor", "org.lineageos.sensor.single_tap",
@@ -154,12 +154,12 @@ class UdfpsSensor : public SysfsPollingOneShotSensor {
   public:
     UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         : SysfsPollingOneShotSensor(
-              sensorHandle, callback, PANEL_UDFPS_PATH, 
+              sensorHandle, callback, PANEL_UDFPS_PATH,
 #ifdef PANEL_UDFPS_ENABLED_PATH
               PANEL_UDFPS_ENABLED_PATH,
 #else
               std::nullopt,
-#endif     
+#endif
               std::nullopt, "UDFPS Sensor", "org.lineageos.sensor.udfps",
               static_cast<SensorType>(SENSOR_TYPE_BASE + 3)) {}
 };

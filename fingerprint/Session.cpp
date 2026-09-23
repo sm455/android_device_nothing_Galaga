@@ -166,7 +166,7 @@ ndk::ScopedAStatus Session::resetLockout(const HardwareAuthToken& hat) {
 ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int32_t y, float minor,
                                           float major) {
     ALOGI("onPointerDown: x=%d, y=%d, minor=%f, major=%f", x, y, minor, major);
-#ifdef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM
     setFOD(FOD_ENABLE);
 #else
     ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
@@ -178,7 +178,7 @@ ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int3
 ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
     ALOGI("onPointerUp");
 
-#ifndef TARGET_USES_LHBM 
+#ifndef TARGET_USES_LHBM
     ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
 #endif
 
@@ -188,7 +188,7 @@ ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
 ndk::ScopedAStatus Session::onUiReady() {
     ALOGI("onUiReady");
 
-#ifndef TARGET_USES_LHBM 
+#ifndef TARGET_USES_LHBM
     ::android::base::WriteStringToFile("1", "/sys/panel_feature/ui_status");
 #endif
 
@@ -241,7 +241,7 @@ ndk::ScopedAStatus Session::setIgnoreDisplayTouches(bool shouldIgnore) {
 ndk::ScopedAStatus Session::cancel() {
     ALOGI("cancel");
 
-#ifdef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM
     setFOD(FOD_FINISHED);
 #else
     ::android::base::WriteStringToFile("0", "/sys/panel_feature/ui_status");
@@ -261,7 +261,7 @@ ndk::ScopedAStatus Session::cancel() {
 ndk::ScopedAStatus Session::close() {
     ALOGI("close");
 
-#ifdef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM
     setFOD(FOD_FINISHED);
 #endif
 
@@ -423,7 +423,7 @@ void Session::notify(const fingerprint_msg_t* msg) {
         case FINGERPRINT_AUTHENTICATED: {
             ALOGD("onAuthenticated(fid=%d, gid=%d)", msg->data.authenticated.finger.fid,
                 msg->data.authenticated.finger.gid);
-#ifdef TARGET_USES_LHBM 
+#ifdef TARGET_USES_LHBM
                 setFOD(FOD_FINISHED);
 #endif
             if (msg->data.authenticated.finger.fid != 0) {

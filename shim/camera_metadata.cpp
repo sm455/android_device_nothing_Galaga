@@ -18,7 +18,7 @@ bool is_telephoto(const camera_metadata_t* dst, const float* data, size_t data_c
     }
     // Check existing buffer
     camera_metadata_entry_t entry;
-    if (find_camera_metadata_entry(const_cast<camera_metadata_t*>(dst), 
+    if (find_camera_metadata_entry(const_cast<camera_metadata_t*>(dst),
                                    ANDROID_LENS_INFO_AVAILABLE_FOCAL_LENGTHS, &entry) == 0) {
         for (size_t i = 0; i < entry.count; i++) {
             if (entry.data.f[i] > 7.0f) return true;
@@ -32,7 +32,7 @@ extern "C" int add_camera_metadata_entry(camera_metadata_t* dst, uint32_t tag, c
     static auto add_camera_metadata_entry_orig =
             reinterpret_cast<typeof(add_camera_metadata_entry)*>(
                     dlsym(RTLD_NEXT, "add_camera_metadata_entry"));
-    static auto update_camera_metadata_entry_orig = 
+    static auto update_camera_metadata_entry_orig =
             reinterpret_cast<typeof(update_camera_metadata_entry)*>(
                     dlsym(RTLD_NEXT, "update_camera_metadata_entry"));
 

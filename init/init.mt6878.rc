@@ -968,7 +968,7 @@ on boot
     chown system radio /dev/ttyGS1
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
-#NT CHG   
+#NT CHG
 on property:sys.UiBatteryLevel=*
     write proc/charger/ui_soc ${sys.UiBatteryLevel}
 

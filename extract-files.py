@@ -50,7 +50,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/mt6878/lib3a.ae.stat.so', 'vendor/lib64/libarmnn_ndk.mtk.vndk.so'): blob_fixup()
         .add_needed('liblog.so'),
-    ( 
+    (
         'vendor/lib64/hw/hwcomposer.mtk_common.so',
         'vendor/lib64/mt6878/libcam.hal3a.ctrl.so',
         'vendor/lib64/mt6878/libcam.hal3a.so',

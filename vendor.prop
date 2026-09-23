@@ -314,7 +314,7 @@ ro.vendor.mtk_thermal_2_0=1
 # USB
 vendor.usb.controller=11201000.usb0
 
-# Vibrator 
+# Vibrator
 vendor.vibrator.device=/dev/aac_richtap
 
 # WiFi
