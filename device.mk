@@ -300,6 +300,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/google/pixel \
+    hardware/mediatek/libion_mtk \
     hardware/mediatek/libmtkperf_client \
     hardware/google/interfaces
 
