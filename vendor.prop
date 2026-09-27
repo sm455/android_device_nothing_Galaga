@@ -281,6 +281,7 @@ ro.vendor.nothing.feature.diff.product.GalagaJPN=0x120000000000000000000000L
 ro.vendor.mtk_eccci_c2k=1
 
 # Surfaceflinger
+debug.graphics.game_default_frame_rate.disabled=true
 debug.sf.disable_backpressure=1
 debug.sf.late.sf.duration=14600000
 debug.sf.late.app.duration=18000000
@@ -314,7 +315,6 @@ debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.native_mode=260
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.game_default_frame_rate_override=60
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=4
@@ -323,6 +323,7 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=3000
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.uclamp.min=160
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Thermal
