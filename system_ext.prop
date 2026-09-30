@@ -15,6 +15,9 @@ persist.vendor.mtk.vilte.enable=1
 persist.vendor.mtk_rcs_single_reg_support=1
 persist.vendor.mtk_rtt_support=1
 persist.vendor.pco5.radio.ctrl=0
+ro.vendor.mtk_gwsd_support=1
+ro.vendor.mtk_telephony_add_on_policy=0
+ro.vendor.vodata_support=1
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
