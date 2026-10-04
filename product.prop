@@ -16,7 +16,18 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+# Camera
+ro.camerax.extensions.enabled=true
+ro.com.google.lens.oem_camera_package=com.nothing.camera
+vendor.camera.aux.packagelist=com.nothing.camera,org.codeaurora.snapcam,org.lineageos.aperture
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # RKPD
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 remote_provisioning.tee.rkp_only=1
 remote_provisioning.strongbox.rkp_only=1
+
+# NT
+ro.product.brand_device_name=CMF by Nothing Phone 2 Pro

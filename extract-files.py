@@ -43,10 +43,16 @@ blob_fixups: blob_fixups_user_type = {
         .apktool_patch('ims-patches'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'vendor/bin/hw/mt6878/camerahalserver': blob_fixup()
-        .add_needed('libcamera_metadata_ntshim.so'),
+    'system_ext/lib64/libofflineproc_jni_aidl.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    'system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so' : blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V6-ndk.so','android.hardware.graphics.common-V7-ndk.so'),
     'vendor/etc/displayconfig/display_id_4627039422300187648.xml': blob_fixup()
         .regex_replace('<transitionPoint>0.6</transitionPoint>', '<transitionPoint>0.840537</transitionPoint>'),
+    'vendor/etc/init/vendor.noth.hardware.camera-service.rc': blob_fixup()
+        .regex_replace('NtCamAlgoCapacity', 'CameraServiceCapacity'),
     'vendor/lib64/hw/mt6878/vendor.mediatek.hardware.pq_aidl-impl.so': blob_fixup()
         .add_needed('libui_shim.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
@@ -132,6 +138,25 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libformatter.so', 'libformatter-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
         .add_needed('libaudioclient_shim.so'),
+    'vendor/lib64/vendor.noth.hardware.camera-service-impl.so' : blob_fixup()
+        .add_needed('libui_shim.so'),
+    'vendor/lib64/libntcamskia.so' : blob_fixup()
+        .add_needed('libnativewindow.so'),
+    (
+        'vendor/lib64/libAncHumanBeauty.so',
+        'vendor/lib64/libwa_rtdof.so',
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    'vendor/lib64/libmorpho_RapidEffect.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
