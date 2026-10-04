@@ -1,0 +1,22 @@
+// MtkApuStub/Android.bp
+
+android_app {
+    name: "MtkApuStub",
+    manifest: "AndroidManifest.xml",
+    certificate: "platform",
+    system_ext_specific: true,
+    privileged: true,
+    sdk_version: "current",
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "mediatek-apu-gid.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "mediatek-apu-gid.xml",
+    sub_dir: "permissions",
+    src: "mediatek-apu-gid.xml",
+}
