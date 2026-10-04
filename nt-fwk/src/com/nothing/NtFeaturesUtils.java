@@ -13,6 +13,10 @@ import java.util.BitSet;
 
 public class NtFeaturesUtils {
 
+  public static final int NTF_QCOM = 59;
+  public static final int NTF_MTK = 60;
+  public static final int NTF_GALAGA = 93;
+  
     private static final BitSet sFeatures;
 
     static {
