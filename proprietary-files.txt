@@ -1178,6 +1178,14 @@ vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
 
+# NTCamera
+system/etc/sysconfig/nothing-hiddenapi-package-allowlist.xml
+system/lib64/libnelib.so
+system_ext/etc/permissions/privapp-permissions-NothingExperience.xml
+system_ext/priv-app/NTCamera/NTCamera.apk
+system_ext/priv-app/NTGallery/NTGallery.apk
+system_ext/priv-app/NothingExperience/NothingExperience.apk
+
 # NTF
 vendor/bin/ntf-service
 vendor/etc/init/init.ntf.rc
