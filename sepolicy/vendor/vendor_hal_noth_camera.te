@@ -1,0 +1,7 @@
+hal_attribute_service(vendor_hal_noth_camera, vendor_hal_noth_camera_service)
+hal_client_domain(platform_app, vendor_hal_noth_camera)
+hal_client_domain(system_app, vendor_hal_noth_camera)
+hal_client_domain(system_server, vendor_hal_noth_camera)
+binder_call(vendor_hal_noth_camera_client, vendor_hal_noth_camera_server)
+wakelock_use(vendor_hal_noth_camera_server)
+set_prop(vendor_hal_noth_camera, vendor_nothing_camera_prop)

@@ -1,3 +1,7 @@
+# Camera
+/vendor/bin/hw/vendor\.noth\.hardware\.camera-service    u:object_r:vendor_hal_camera_default_exec:s0
+/data/vendor/camera/anc(/.*)?    u:object_r:camera_vendor_data_file:s0
+
 # Fingerprint
 /data/vendor/goodix(/.*)?                                                    u:object_r:vendor_goodix_gf_data_file:s0
 /vendor/bin/hw/vendor\.nothing\.hardware\.biometrics\.fingerprint-service    u:object_r:hal_fingerprint_default_exec:s0
@@ -27,3 +31,48 @@
 /dev/aac_richtap                                                       u:object_r:aac_richtap_device:s0
 /dev/ics_sfdc                                                          u:object_r:aac_richtap_device:s0
 /vendor/bin/hw/android\.hardware\.vibrator\.service\.nothing[^/]*      u:object_r:hal_vibrator_default_exec:s0
+
+# NT
+/vendor/lib(64)?/libcam_nothing\.so                                    u:object_r:same_process_hal_file:s0
+/vendor/lib64/mt6878/libcam_nothing\.so                                u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libnoteengine\.so                                     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libcamxextension_night\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libportrait_repair_apu\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libofflinepostprocclient\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libjni_rater_api\.so                                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libstmobile_rater\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libwa_rtdof\.so                                       u:object_r:same_process_hal_file:s0
+/vendor/lib64/libwa_sat\.so                                            u:object_r:same_process_hal_file:s0
+
+# ANC
+/vendor/lib(64)?/libanc_scene\.so                                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_dc_base\.so                                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libancbase-beauty\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libAncHumanBeauty\.so                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_objdetection\.so                               u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_objdetection_impl\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_single_rt_bokeh\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libanc_hdr_check_nothing\.so                          u:object_r:same_process_hal_file:s0
+
+# Arcsoft
+/vendor/lib(64)?/libarcsoft_panorama\.so                              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_watermark\.so                             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_beautyshot\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_hdr_detection\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib64/libarcsoft_hdr_detection\.so                            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_low_light_hdr\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_superportrait\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_scbokeh_image\.so                         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_scbokeh_preview\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_super_night_raw\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dark_vision_raw\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_aiscenedetection\.so                      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_singlecam_bokeh\.so                       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_high_dynamic_range_v5\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_mf_superresolution\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_image\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_dualcam_refocus_video\.so                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_super_night_raw\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libarcsoft_portrait_distortion_correction\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmouth_mask_detection\.arcsoft\.so                 u:object_r:same_process_hal_file:s0

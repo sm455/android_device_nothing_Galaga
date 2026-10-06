@@ -1,5 +1,6 @@
 # Camera
-vendor.camera.mdp.  u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.mdp.    u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.ncf     u:object_r:vendor_nothing_camera_prop:s0
 
 # Fingerprint
 persist.vendor.goodix.dump_data     u:object_r:vendor_fingerprint_prop:s0
