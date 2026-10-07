@@ -4,4 +4,5 @@ allow mtk_hal_camera vendor_ntf_file:file r_file_perms;
 allow mtk_hal_camera camera_vendor_data_file:dir { write add_name search };
 allow mtk_hal_camera camera_vendor_data_file:file { read write create getattr setattr open };
 
-getprop(mtk_hal_camera, camera_config_prop)
+get_prop(mtk_hal_camera, camera_config_prop)
+set_prop(mtk_hal_camera, system_camera_public_sys_prop)

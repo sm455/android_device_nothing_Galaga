@@ -164,6 +164,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
