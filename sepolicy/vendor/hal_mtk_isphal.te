@@ -1,5 +1,0 @@
-hal_attribute_service(hal_mtk_isphal, hal_camera_service)
-hal_client_domain(platform_app, hal_mtk_isphal)
-hal_server_domain(mtk_hal_camera, hal_mtk_isphal)
-binder_call(hal_mtk_isphal_client, hal_mtk_isphal_server)
-binder_call(hal_mtk_isphal_server, hal_mtk_isphal_client)
