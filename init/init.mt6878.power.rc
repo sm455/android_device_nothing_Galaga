@@ -137,3 +137,13 @@ service vendor.hwcomposer-3-2 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
+
+service vendor.noth.camera-default /vendor/bin/hw/vendor.noth.hardware.camera-service
+    override
+    interface aidl vendor.noth.hardware.camera.INtCamService/default
+    class late_start
+    user cameraserver
+    group audio camera input drmrpc
+    ioprio rt 4
+    priority -10
+    task_profiles ServiceCapacityRestricted

@@ -53,8 +53,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V6-ndk.so','android.hardware.graphics.common-V7-ndk.so'),
     'vendor/etc/displayconfig/display_id_4627039422300187648.xml': blob_fixup()
         .regex_replace('<transitionPoint>0.6</transitionPoint>', '<transitionPoint>0.840537</transitionPoint>'),
-    'vendor/etc/init/vendor.noth.hardware.camera-service.rc': blob_fixup()
-        .regex_replace('NtCamAlgoCapacity', 'CameraServiceCapacity'),
     'vendor/lib64/hw/mt6878/vendor.mediatek.hardware.pq_aidl-impl.so': blob_fixup()
         .add_needed('libui_shim.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),

@@ -14,6 +14,7 @@ binder_call(mtk_hal_camera, vendor_hal_camera_default)
 allow vendor_hal_camera_default platform_app:binder call;
 
 getprop(vendor_hal_camera_default, camera_config_prop)
+getprop(vendor_hal_camera_default, graphics_config_writable_prop)
 
 allow vendor_hal_camera_default kmsg_device:chr_file { read write getattr open };
 allow vendor_hal_camera_default apusys_device:chr_file rw_file_perms;

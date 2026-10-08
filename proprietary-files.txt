@@ -1191,6 +1191,11 @@ vendor/bin/ntf-service
 vendor/etc/init/init.ntf.rc
 vendor/lib64/libntf.so
 
+# NTFeature
+system_ext/etc/permissions/gallery-google-lens-permissions.xml
+system_ext/etc/permissions/google-lens-permissions.xml
+system_ext/etc/permissions/com.nothing.feature.xml
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram-service
 vendor/bin/nvram_daemon
