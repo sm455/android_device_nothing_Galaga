@@ -1180,6 +1180,7 @@ vendor/etc/libnfc-tms_RF_GB1.conf
 
 # NTCamera
 system/etc/sysconfig/nothing-hiddenapi-package-allowlist.xml
+system/etc/morpho_image_refiner_tuning_params.xml
 system/lib64/libnelib.so
 system_ext/etc/permissions/privapp-permissions-NothingExperience.xml
 system_ext/priv-app/NTCamera/NTCamera.apk
