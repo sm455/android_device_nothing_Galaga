@@ -165,6 +165,10 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.system_ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl

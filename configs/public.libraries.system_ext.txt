@@ -1,0 +1,3 @@
+libmtkisp_metadata_sys.so 64
+libofflineproc_jni_aidl.so 64
+vendor.mediatek.hardware.camera.isphal-V1-ndk.so 64
