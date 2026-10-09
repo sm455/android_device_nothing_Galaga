@@ -1,0 +1,3 @@
+# APU access for stock camera
+allow platform_app apusys_device:chr_file rw_file_perms;
+allow platform_app_36 apusys_device:chr_file rw_file_perms;
