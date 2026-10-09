@@ -1312,6 +1312,19 @@ vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
 
+# NTCamera
+system/etc/sysconfig/nothing-hiddenapi-package-allowlist.xml
+system/etc/morpho_image_refiner_tuning_params.xml
+system/lib64/libnelib.so
+system_ext/etc/permissions/com.nothing.feature.xml
+system_ext/etc/permissions/gallery-google-lens-permissions.xml
+system_ext/etc/permissions/google-lens-permissions.xml
+system_ext/etc/permissions/privapp-permissions-NTCamera.xml
+system_ext/etc/permissions/privapp-permissions-NothingExperience.xml
+system_ext/priv-app/NTCamera/NTCamera.apk;OVERRIDES=Camera2,Aperture
+system_ext/priv-app/NTGallery/NTGallery.apk;OVERRIDES=Glimpse,Gallery,Gallery3D,GalleryNew3D
+system_ext/priv-app/NothingExperience/NothingExperience.apk
+
 # NTF
 vendor/bin/ntf-service
 vendor/etc/init/init.ntf.rc
