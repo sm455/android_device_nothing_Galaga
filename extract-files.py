@@ -41,8 +41,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('start', 'enable'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ims-patches'),
-    'system_ext/priv-app/NTCamera/NTCamera.apk': blob_fixup()
-        .apktool_patch('blob-patches/ntcam-patches'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libofflineproc_jni_aidl.so': blob_fixup()
