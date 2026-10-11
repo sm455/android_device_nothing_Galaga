@@ -50,7 +50,9 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V6-ndk.so','android.hardware.graphics.common-V7-ndk.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('ims-patches'),
+        .apktool_patch('blob-patches/ims-patches'),
+    'system_ext/priv-app/NTCamera/NTCamera.apk': blob_fixup()
+        .apktool_patch('blob-patches/ntcam-patches'),
     (
         'vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek',
         'vendor/lib64/egl/libGLES_mali.so',
