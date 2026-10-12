@@ -60,8 +60,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so',
     ): blob_fixup()
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
-    'vendor/bin/hw/camerahalserver': blob_fixup()
-        .add_needed('libcamera_metadata_ntshim.so'),
     'vendor/bin/mnld': blob_fixup()
         .replace_needed('libmnl.so', 'libmnl-mtk.so'),
     'vendor/etc/displayconfig/display_id_4627039422300187648.xml': blob_fixup()
