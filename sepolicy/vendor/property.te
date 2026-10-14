@@ -2,7 +2,8 @@
 vendor_restricted_prop(vendor_nothing_camera_prop)
 
 # Fingerprint
-vendor_internal_prop(vendor_fingerprint_prop)
+vendor_restricted_prop(vendor_fingerprint_prop)
+vendor_public_prop(vendor_nothing_property)
 
 # vibrator
 vendor_internal_prop(vendor_vibrator_prop)
