@@ -2,6 +2,11 @@
 vendor.camera.mdp.    u:object_r:vendor_mtk_camera_prop:s0
 vendor.camera.ncf     u:object_r:vendor_nothing_camera_prop:s0
 
+# Face unlock
+persist.vendor.debug.face_aidl     u:object_r:vendor_face_config_prop:s0
+persist.vendor.face.               u:object_r:vendor_face_config_prop:s0
+vendor.face                        u:object_r:vendor_face_config_prop:s0
+
 # Fingerprint
 persist.vendor.noth.dump_data       u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.goodix.dump_data     u:object_r:vendor_fingerprint_prop:s0

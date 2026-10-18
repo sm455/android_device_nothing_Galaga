@@ -1,0 +1,20 @@
+hal_server_domain(hal_face_default, hal_face)
+init_daemon_domain(hal_face_default)
+hal_client_domain(hal_face_default, hal_graphics_allocator)
+binder_call(hal_face_default, hal_graphics_allocator_default)
+binder_call(hal_face_default, cameraserver)
+binder_call(cameraserver, hal_face_default)
+
+set_prop(hal_face_default, vendor_face_config_prop)
+set_prop(hal_face_default, log_tag_prop)
+get_prop(hal_face_default, system_face_config_prop)
+get_prop(hal_face_default, camera_config_prop)
+
+allow hal_face_default face_vendor_data_file:dir create_dir_perms;
+allow hal_face_default face_vendor_data_file:file create_file_perms;
+
+allow hal_face_default fwk_sensor_service:service_manager find;
+allow hal_face_default fwk_camera_service:service_manager find;
+allow hal_face_default fwk_camera_hwservice:hwservice_manager find;
+allow hal_face_default hidl_token_hwservice:hwservice_manager find;
+allow hal_face_default hal_graphics_mapper_hwservice:hwservice_manager find;

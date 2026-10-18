@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .apktool_patch('blob-patches/ims-patches'),
     'system_ext/priv-app/NTCamera/NTCamera.apk': blob_fixup()
         .apktool_patch('blob-patches/ntcam-patches'),
+    'vendor/bin/hw/android.hardware.biometrics.face-service.noth': blob_fixup()
+        .replace_needed('libcamera2ndk_vendor.so', 'libcamera2ndk_vendor-mtk.so'),
     (
         'vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek',
         'vendor/lib64/egl/libGLES_mali.so',

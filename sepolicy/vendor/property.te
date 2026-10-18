@@ -1,6 +1,9 @@
 # Camera 
 vendor_restricted_prop(vendor_nothing_camera_prop)
 
+# Face unlock
+vendor_restricted_prop(vendor_face_config_prop)
+
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
 vendor_public_prop(vendor_nothing_property)

@@ -1,2 +1,6 @@
+# Camera
 system_public_prop(system_camera_public_sys_prop)
 typeattribute system_camera_public_sys_prop vendor_public_property_type;
+
+# Faceunlock
+system_restricted_prop(system_face_config_prop)

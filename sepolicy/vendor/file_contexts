@@ -2,6 +2,10 @@
 /vendor/bin/hw/vendor\.noth\.hardware\.camera-service    u:object_r:vendor_hal_camera_default_exec:s0
 /data/vendor/camera/anc(/.*)?    u:object_r:camera_vendor_data_file:s0
 
+# Face
+/vendor/bin/hw/android\.hardware\.biometrics\.face-service\.noth    u:object_r:hal_face_default_exec:s0
+/data/vendor/faceunlock_evaluate(/.*)?                              u:object_r:face_vendor_data_file:s0
+
 # Fingerprint
 /data/vendor/goodix(/.*)?                                                    u:object_r:vendor_goodix_gf_data_file:s0
 /vendor/bin/hw/vendor\.nothing\.hardware\.biometrics\.fingerprint-service    u:object_r:hal_fingerprint_default_exec:s0

@@ -1,1 +1,5 @@
+# Camera
 vendor.camera.apppkg.name    u:object_r:system_camera_public_sys_prop:s0
+
+# Face unlock
+system.face    u:object_r:system_face_config_prop:s0
