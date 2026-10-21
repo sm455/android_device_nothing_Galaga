@@ -209,17 +209,13 @@ $(foreach sku, EEA ROW TUR, \
         frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(sku)/android.hardware.nfc.xml))
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 PRODUCT_PACKAGES += \
     CarrierConfigResGalaga \
     FrameworkResOverlayGalaga \
     SettingsResOverlayGalaga \
     SystemUIOverlayGalaga \
     TelephonyResTargetGalaga \
-    WifiOverlayGalaga
-
-PRODUCT_PACKAGES += \
+    WifiOverlayGalaga \
     LineageSDKResGalaga
 
 PRODUCT_PACKAGES += \
