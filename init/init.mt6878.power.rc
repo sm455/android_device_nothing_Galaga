@@ -20,6 +20,7 @@ on init
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/ntcam-algo/cpus 4-5
 
 on charger
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0

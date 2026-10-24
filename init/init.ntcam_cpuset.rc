@@ -1,0 +1,12 @@
+on init
+    # Create a cpuset for ntcam-algo processes
+    mkdir /dev/cpuset/ntcam-algo
+    copy /dev/cpuset/cpus /dev/cpuset/ntcam-algo/cpus
+    copy /dev/cpuset/mems /dev/cpuset/ntcam-algo/mems
+    chown system camera /dev/cpuset/ntcam-algo
+    chown system camera /dev/cpuset/ntcam-algo/cgroup.procs
+    chown system camera /dev/cpuset/ntcam-algo/cpus
+    chown system system /dev/cpuset/ntcam-algo/tasks
+    chmod 0664 /dev/cpuset/ntcam-algo/cgroup.procs
+    chmod 0664 /dev/cpuset/ntcam-algo/cpus
+    chmod 0664 /dev/cpuset/ntcam-algo/tasks

@@ -72,8 +72,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libmnl.so', 'libmnl-mtk.so'),
     'vendor/etc/displayconfig/display_id_4627039422300187648.xml': blob_fixup()
         .regex_replace('<transitionPoint>0.6</transitionPoint>', '<transitionPoint>0.840537</transitionPoint>'),
-    'vendor/etc/init/vendor.noth.hardware.camera-service.rc': blob_fixup()
-        .regex_replace('NtCamAlgoCapacity', 'CameraServiceCapacity'),
     'vendor/lib64/hw/android.hardware.soundtrigger3-impl.so': blob_fixup()
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk-mtk.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()

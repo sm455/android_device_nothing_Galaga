@@ -45,6 +45,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.ntcam_cpuset.rc",
+    src: "init.ntcam_cpuset.rc",
+    relative_install_path: "init",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
     name: "init.project.rc",
     src: "init.project.rc",
     relative_install_path: "init/hw",
