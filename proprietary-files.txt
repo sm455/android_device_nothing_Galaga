@@ -212,7 +212,6 @@ vendor/lib64/libbt-vendor.so
 vendor/firmware/BT_FW.cfg
 
 # Connectivity
-vendor/bin/conninfra_loader
 vendor/firmware/connfem.cfg
 vendor/firmware/conninfra.cfg
 vendor/lib64/libconnfem.so

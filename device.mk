@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MtkApuStub
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    conninfra_loader
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
