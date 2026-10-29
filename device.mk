@@ -220,7 +220,6 @@ PRODUCT_PACKAGES += \
     WifiOverlayGalaga
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayGalaga \
     LineageSDKResGalaga
 
 PRODUCT_PACKAGES += \
