@@ -12,6 +12,12 @@ vendor.audio.powerhal.power.dl=true
 vendor.audio.powerhal.power.ul=true
 vendor.audio.usb.iems.period_us=5000
 
+# Audio AAC
+persist.vendor.newAAC.dump=0
+persist.vendor.newAAC.enable.value=1.000000
+persist.vendor.newAAC.volume.value=0.000000
+persist.vendor.newAAC.cur.config=MUSIC
+
 # Bluetooth
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.leaudio_offload.disabled=true

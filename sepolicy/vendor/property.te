@@ -1,3 +1,6 @@
+# Audio
+vendor_public_prop(vendor_nothing_newAAC_prop)
+
 # Camera 
 vendor_restricted_prop(vendor_nothing_camera_prop)
 

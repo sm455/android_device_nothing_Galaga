@@ -1,5 +1,17 @@
 # All proprietary files from this list are from Galaga_B4.1-260928-1137
 
+# AAC
+system/etc/sysconfig/preinstalled-packages-audioeffect.xml
+system/priv-app/NothingAudioEffectService/NothingAudioEffectService.apk
+vendor/etc/aac/ID05-2_6kHz.txt
+vendor/etc/aac/ID06-2_6kHz.txt
+vendor/etc/aac/ID07-2_6kHz.txt
+vendor/etc/aac/ID08-2_6kHz.txt
+vendor/etc/aac/ID09-2_6kHz.txt
+vendor/etc/mobile/mobile.config
+vendor/lib64/soundfx/libAACeffect_NT.so
+vendor/lib64/libMobileAPI_SHARED.so
+
 # AAL
 vendor/lib64/mt6878/libaal_cust_func.so:vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6878/libaalservice.so:vendor/lib64/libaalservice.so
