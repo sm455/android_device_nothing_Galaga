@@ -46,6 +46,24 @@
         <boolean name="rtt_supported_bool" value="true" />
         <boolean name="ignore_rtt_mode_setting_bool" value="true" />
         <boolean name="rtt_upgrade_supported_bool" value="true" />
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-126" />
+            <item value="-118" />
+            <item value="-110" />
+            <item value="-97" />
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="4">
+            <item value="-112" />
+            <item value="-107" />
+            <item value="-97" />
+            <item value="-91" />
+        </int-array>
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-119" />
+            <item value="-113" />
+            <item value="-105" />
+            <item value="-97" />
+        </int-array>
     </carrier_config>
     <carrier_config cid="850">
         <boolean name="vilte_data_is_metered_bool" value="false" />
