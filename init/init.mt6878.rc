@@ -29,8 +29,8 @@ on init
     write /proc/sys/net/ipv4/tcp_wmem "262144 524288 8388608"
 
 #NT_EDIT BEE-447 add for aac richtap vibration begin
-    chmod 0666 proc/haptic/f0
-    chown system system proc/haptic/f0
+    chmod 0666 /proc/haptic/f0
+    chown system system /proc/haptic/f0
 #NT_EDIT BEE-447 add for aac richtap vibration end
 
 on late-init
