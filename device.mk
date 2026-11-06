@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default
+    audio.bluetooth.default \
+    vendor.mediatek.hardware.bluetooth.audio-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
