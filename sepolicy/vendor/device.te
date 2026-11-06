@@ -1,2 +1,5 @@
+# Apu
+typeattribute apusys_device, mlstrustedobject;
+
 # Vibrator
 type aac_richtap_device, dev_type;
