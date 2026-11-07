@@ -25,6 +25,9 @@ PRODUCT_MODEL := A001
 PRODUCT_GMS_CLIENTID_BASE := android-nothing
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceName=Galaga \
     BuildDesc="sys_mssi_64_64only_ww_armv82-user 16 BP2A.250605.031.A3 2609281137 release-keys" \
-    BuildFingerprint=Nothing/Galaga/Galaga:16/BP2A.250605.031.A3/2609281137:user/release-keys
+    BuildFingerprint=Nothing/Galaga/Galaga:16/BP2A.250605.031.A3/2609281137:user/release-keys \
+    DeviceName=Galaga \
+    DeviceProduct=Galaga \
+    SystemDevice=Galaga \
+    SystemName=Galaga

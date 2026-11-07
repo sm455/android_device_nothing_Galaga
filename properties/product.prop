@@ -27,3 +27,6 @@ persist.sys.fuse.passthrough.enable=true
 
 # RKPD
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# SKU
+import /product/etc/product_${ro.boot.hardware.sku}.prop

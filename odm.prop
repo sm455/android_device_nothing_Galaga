@@ -1,1 +1,0 @@
-import /odm/etc/odm_${ro.boot.hardware.sku}.prop

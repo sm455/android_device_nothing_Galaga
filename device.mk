@@ -267,7 +267,8 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/,$(TARGET_COPY_OUT_ODM)/etc)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/properties/sku_odm/,$(TARGET_COPY_OUT_ODM)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/properties/sku_product/,$(TARGET_COPY_OUT_PRODUCT)/etc)
 
 # Security Patch
 BOOT_SECURITY_PATCH := 2026-04-05
